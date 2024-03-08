@@ -13,43 +13,45 @@
 // ESERCIZIO 1
 function checkAge() {
     const myAge = 32;
-    const message = '';
+    let message = '';
 
     if (myAge < 18) {
         message = `Sei troppo giovane! Hai ${myAge} anni!`;
     } else {
-        message = 'Hai più di 18 anni!';
+        message = `Hai più di 18 anni!`;
     }
 }
 checkAge();
+// cambiare const con let se si vuole avere una variabile 
+
 
 // ESERCIZIO 2
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
-    console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
+    console.log(`Nella mia palette ci sono ${colors.length} colori!`);
 }
 printColorsNumber();
-
+// length scritto sbagliato
 
 // ESERCIZIO 3
 function addNumbers() {
     const userNumber = prompt('Inserisci un numero');
-    const total = userNumber + 12;
+    const total = parseInt(userNumber) + 12;
 
     console.log(`Il risultato finale è ${total}`);
 }
 addNumbers();
-
+// mettere prseInt per verificare che venga assegnato un numero e non una stringa
 
 // ESERCIZIO 4
 function checkAccess() {
     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = 'false';
+    let grantAccess = false;
 
     if (addresses.includes(userEmail)) {
-        grantAccess = 'true';
+        grantAccess = true;
     }
 
     if (grantAccess === true) {
@@ -59,7 +61,7 @@ function checkAccess() {
     }
 }
 checkAccess();
-
+// i valori booleani non vanno tra le ''
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
 function checkAccessImproved() {
@@ -67,7 +69,7 @@ function checkAccessImproved() {
 
     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = 'false';
+    let grantAccess = false;
 
     for (let i = 0; i < addresses.length; i++) {
         const email = addresses[i];
@@ -75,7 +77,7 @@ function checkAccessImproved() {
         if (userEmail.length > 5) {
 
             if (email === userEmail) {
-                grantAccess = 'true';
+                grantAccess = true;
 
             }
 
@@ -89,7 +91,8 @@ function checkAccessImproved() {
     }
     checkAccessImproved();
 
-
+}
+// mancava una } i valori booleani non vanno tra le '' 
 
 
 
