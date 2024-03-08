@@ -89,9 +89,8 @@ function checkAccessImproved() {
             console.log('Accesso negato!');
         }
     }
-    checkAccessImproved();
-
 }
+checkAccessImproved();
 // mancava una } i valori booleani non vanno tra le '' 
 
 
